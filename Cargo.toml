@@ -1,0 +1,22 @@
+[package]
+name = "ai_weather"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+description = "AI-driven weather detection and forecasting: MLP-ensemble multi-horizon forecaster, condition detector and forecast-residual anomaly detector, evaluated on public datasets. Zero external dependencies."
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+
+[lib]
+name = "ai_weather"
+path = "src/lib.rs"
+
+[[bin]]
+name = "ai_weather"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
